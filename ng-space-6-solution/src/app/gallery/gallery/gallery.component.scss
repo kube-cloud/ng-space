@@ -1,0 +1,40 @@
+:host {
+  padding-top: 50px;
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  height: 100%;
+
+  mat-list {
+    padding-top: 0px;
+    border: solid 1px;
+    border-radius: 7px;
+    flex: 1 1 30%;
+    height: 600px;
+    .header {
+      display: flex;
+      padding-right: 25px;
+      padding-top: 10px;
+      border-radius: 7px;
+      background-color: rgb(245, 246, 247);
+      height: 50px;
+      button {
+        margin-left: auto;
+      }
+    }
+    mat-list-item {
+      cursor: pointer;
+      &:hover {
+        background-color: rgba(85, 119, 149, 0.1);
+        color: #1aa6d7;
+      }
+    }
+  }
+
+  .content {
+    margin-left: 25px;
+    flex: 1 1 60%;
+    border-radius: 7px;
+    background-color: #e8edf2;
+  }
+}

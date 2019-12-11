@@ -1,0 +1,13 @@
+<mat-list role="list">
+  <div class="header">
+    <h1 mat-subheader>Memories</h1>
+    <button mat-mini-fab color="primary" (click)="openAddMemoryDialog()">+</button>
+  </div>
+  <ng-container *ngFor="let memory of memories$ | async">
+    <mat-list-item (click)="onMemorySelected(memory)" role="listitem">{{ memory.name }}</mat-list-item>
+  </ng-container>
+</mat-list>
+<div class="content">
+  <ngs-memory [memory]="selectedMemory$ | async"></ngs-memory>
+  <ngs-statistics [memories]="memories$ | async"></ngs-statistics>
+</div>

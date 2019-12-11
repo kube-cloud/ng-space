@@ -1,0 +1,11 @@
+:host {
+  display: flex;
+  height: 90%;
+  mat-card {
+    background-color: #e8edf2;
+    box-shadow: none;
+  }
+  .center {
+    margin: auto;
+  }
+}

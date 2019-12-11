@@ -1,0 +1,23 @@
+<h1 mat-dialog-title>Add your favorite memory</h1>
+<div class="container" [formGroup]="memoryForm">
+  <mat-form-field>
+    <input matInput placeholder="name" formControlName="name" required />
+  </mat-form-field>
+
+  <mat-form-field>
+    <input matInput placeholder="url" formControlName="url" required />
+  </mat-form-field>
+
+  <div class="radio-container">
+    <label>Who took it: </label>
+    <mat-radio-group formControlName="type">
+      <mat-radio-button value="PRO">Pro</mat-radio-button>
+      <mat-radio-button value="FAN">Fan</mat-radio-button>
+      <mat-radio-button value="IDK">Idk</mat-radio-button>
+    </mat-radio-group>
+  </div>
+  <div class="actions">
+    <button color="primary" mat-raised-button [disabled]="memoryForm.invalid" (click)="addMemory()">Add</button>
+    <button mat-raised-button (click)="closeDialog()">Cancel</button>
+  </div>
+</div>

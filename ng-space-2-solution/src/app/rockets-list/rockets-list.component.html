@@ -1,0 +1,19 @@
+<h1>Rockets</h1>
+<div class="items-container">
+  <div class="items-header">
+    <div class="hcell">Name</div>
+    <div class="hcell">First flight</div>
+    <div class="hcell">Status</div>
+    <div class="hcell">More</div>
+  </div>
+  <ng-container *ngFor="let rocket of rockets$ | async">
+    <div class="item-row">
+      <div class="rcell">{{ rocket.rocket_name }}</div>
+      <div class="rcell">{{ rocket.first_flight | date: 'fullDate' }}</div>
+      <div class="rcell"><i class="fa fa-circle" [ngClass]="rocket.active ? 'active' : 'inactive'"></i></div>
+      <div class="rcell fa fa-caret-square-o-down fa-2x" (click)="displayDetails(rocket.rocket_id)"></div>
+    </div>
+    <ngs-rocket-details *ngIf="shouldDisplayDetails(rocket.rocket_id)" [payloads]="rocket.payload_weights"
+      [@slideIn]="'expanded'"></ngs-rocket-details>
+  </ng-container>
+</div>
