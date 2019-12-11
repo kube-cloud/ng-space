@@ -1,0 +1,16 @@
+:host {
+  display: flex;
+  flex-flow: column;
+  background-color: lightgray;
+  .row {
+    display: flex;
+    min-width: 100%;
+  }
+  .label-value-container {
+    flex: 1 1 50%;
+  }
+  a {
+    align-self: flex-end;
+    padding: 0px 10px 10px 0px;
+  }
+}

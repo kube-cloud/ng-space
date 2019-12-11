@@ -1,0 +1,10 @@
+<mat-card *ngIf="memory; else emptyCard">
+  <mat-card-content>
+    <img mat-card-image [src]="memory.url" width="500" height="500" />
+  </mat-card-content>
+</mat-card>
+<ng-template #emptyCard>
+  <div class="center">
+    hmmm, please select a memory
+  </div>
+</ng-template>
