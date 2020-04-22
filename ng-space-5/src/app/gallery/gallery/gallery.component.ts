@@ -1,7 +1,7 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
 import { Memory } from '../models/memory';
 import { MemoriesService } from '../services/memories.service';
-import { MatDialog } from '@angular/material';
+import { MatDialog } from '@angular/material/dialog';
 import { AddMemoryDialogComponent } from '../add-memory-dialog/add-memory-dialog.component';
 import { Subscription } from 'rxjs';
 import { filter } from 'rxjs/operators';
